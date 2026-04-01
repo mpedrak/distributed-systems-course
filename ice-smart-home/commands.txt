@@ -1,0 +1,28 @@
+device names 
+    server_1
+        furnace, chimney_furnace, smelting_furnace, sensor, bulbulator, advanced_bulbulator
+
+    server_2
+        furnace_1, chimney_furnace_1, chimney_furnace_2, chimney_furnace_3
+
+end program - q, quit, exit, stop, end
+clear terminal - cls, clear
+log info - <device_name> status
+
+furnace (_1)
+    on, off, is_on
+
+chimney_furnace (_1, _2, _3)
+    on, off, is_on, chimney_state, open, open_async, close, close_async
+
+smelting_furnace
+    on, on_async, is_on, get, put <material> <material> <material> ...
+
+bulbulator
+    on, off, is_on, get, set <bubble_color>_<bubble_size>
+
+advanced_bulbulator
+    next, random, get, set <bubble_color>_<bubble_size> <bubble_color>_<bubble_size> ...
+
+sensor
+    check, air_good

@@ -1,0 +1,1 @@
+python client.py --Ice.Config=config.client

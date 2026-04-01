@@ -1,0 +1,60 @@
+#
+# The client reads this property to create the reference to the
+# "hello" object in the server.
+#
+
+# Server 1
+Furnace.Proxy=device/furnace : tcp -h 127.0.0.2 -p 10000 -z : udp -h 127.0.0.2 -p 10000 -z
+ChimneyFurnace.Proxy=device/chimney_furnace : tcp -h 127.0.0.2 -p 10000 -z : udp -h 127.0.0.2 -p 10000 -z
+SmeltingFurnace.Proxy=device/smelting_furnace : tcp -h 127.0.0.2 -p 10000 -z : udp -h 127.0.0.2 -p 10000 -z
+CarbonSensor.Proxy=device/carbon_sensor : tcp -h 127.0.0.2 -p 10000 -z : udp -h 127.0.0.2 -p 10000 -z
+Bulbulator.Proxy=device/bulbulator : tcp -h 127.0.0.2 -p 10000 -z : udp -h 127.0.0.2 -p 10000 -z
+AdvancedBulbulator.Proxy=device/advanced_bulbulator : tcp -h 127.0.0.2 -p 10000 -z : udp -h 127.0.0.2 -p 10000 -z
+
+# Server 2
+Furnace1.Proxy=device/furnace_1 : tcp -h 127.0.0.3 -p 10000 -z : udp -h 127.0.0.3 -p 10000 -z
+ChimneyFurnace1.Proxy=device/chimney_furnace_1 : tcp -h 127.0.0.3 -p 10000 -z : udp -h 127.0.0.3 -p 10000 -z
+ChimneyFurnace2.Proxy=device/chimney_furnace_2 : tcp -h 127.0.0.3 -p 10000 -z : udp -h 127.0.0.3 -p 10000 -z
+ChimneyFurnace3.Proxy=device/chimney_furnace_3 : tcp -h 127.0.0.3 -p 10000 -z : udp -h 127.0.0.3 -p 10000 -z
+
+
+#
+# Warn about connection exceptions.
+#
+Ice.Warn.Connections=1
+
+Ice.ACM.Timeout=10
+
+#
+# Network Tracing
+#
+# 0 = no network tracing
+# 1 = trace connection establishment and closure
+# 2 = like 1, but more detailed
+# 3 = like 2, but also trace data transfer
+#
+Ice.Trace.Network=0
+
+#
+# Protocol Tracing
+#
+# 0 = no protocol tracing
+# 1 = trace protocol messages
+#
+#Ice.Trace.Protocol=1
+
+#
+# Security Tracing
+#
+# 0 = no security tracing
+# 1 = trace messages
+#
+#IceSSL.Trace.Security=1
+
+#
+# SSL Configuration
+#
+#Ice.Plugin.IceSSL=IceSSL.PluginFactory
+#IceSSL.DefaultDir=certs
+#IceSSL.Keystore=client.jks
+#IceSSL.Password=password

@@ -1,0 +1,7 @@
+zkServer2.cmd \zoo1.cfg
+zkServer2.cmd \zoo2.cfg
+zkServer2.cmd \zoo3.cfg
+
+zkCli.cmd -server 127.0.0.1:2181
+zkCli.cmd -server 127.0.0.1:2182
+zkCli.cmd -server 127.0.0.1:2183
