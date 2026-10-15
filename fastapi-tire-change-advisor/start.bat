@@ -1,0 +1,1 @@
+uvicorn tires:app --reload

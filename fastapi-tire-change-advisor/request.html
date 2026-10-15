@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body
+            {
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                padding: 1em;
+            }
+            input, label
+            {
+                margin-bottom: 1em;
+                margin-top: 0.3em;
+                width: 20em;
+            }
+            div
+            {
+                margin-bottom: 2em;
+            }
+            #submit
+            {
+                margin-top: 1.5em;
+                width: 20.7em;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Strona sprawdza czy średnia dobowa temperatura ustabilizowała się poniżej lub powyżej 7°C, aby określić czy należy zmienić opony 
+            samochodowe na zimowe lub letnie. <br> 
+            Uznaje się, iż 14 dni stabilnej temperatury wystarcza, jednak można wprowadzić inną liczbę do sprawdzenia.
+        </div>
+        <h2>Dane do wprowadzenia</h2>
+        <form action="/result">
+            <label>Kraj</label> <br>
+            <input type="text" id="country" name="country"> <br>
+            <label>Miasto</label> <br>
+            <input type="text" id="city" name="city"> <br>
+            <label>Dni do sprawdzenia</label> <br>
+            <input type="number" id="days" name="days" value="14"> <br>
+            <input type="submit" id="submit" value="Sprawdź">
+        </form>
+    </body>
+</html>
